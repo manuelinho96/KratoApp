@@ -2,6 +2,11 @@ img{
     margin-top: 20px;
     margin-bottom:20px;
     margin-left: 50px;
+    margin-right: 50px;
     width: 600px;
     height: 600px;
+}
+.comercio{
+    display: flex;
+    align-items: center
 }

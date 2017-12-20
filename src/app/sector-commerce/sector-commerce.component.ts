@@ -5,13 +5,13 @@ import { Comercio } from '../comercio-list/models/comercio';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
-  selector: 'app-comercio-detail',
-  templateUrl: './comercio-detail.component.html',
-  styleUrls: ['./comercio-detail.component.css']
+  selector: 'app-sector-commerce',
+  templateUrl: './sector-commerce.component.html',
+  styleUrls: ['./sector-commerce.component.css']
 })
-export class ComercioDetailComponent implements OnInit, OnDestroy {
+export class SectorCommerceComponent implements OnInit {
 
-  private comercio:Comercio;
+  private comercios:Observable<Comercio[]>;
   private nombre: string;
   private sub:any;
 
@@ -19,16 +19,12 @@ export class ComercioDetailComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      this.comercioService.getComerciobynombre(params['nombre']).subscribe(data => {
-        this.comercio = data;
-      });
+      this.comercios = this.comercioService.getComerciobysector(params['nombre']);
     });
   }
 
   ngOnDestroy(){
-
     this.sub.unsubscribe();
-
   }
 
 }

@@ -13,7 +13,8 @@ import { AllCommerceComponent } from './all-commerce/all-commerce.component';
 import { ComercioDetailComponent } from './comercio-detail/comercio-detail.component'
 import { HttpModule } from '@angular/http';
 import { CategoriasComponent } from './categorias/categorias.component';
-import { CategoriasService } from './services/categorias.service'
+import { CategoriasService } from './services/categorias.service';
+import { SectorCommerceComponent } from './sector-commerce/sector-commerce.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CategoriasService } from './services/categorias.service'
     ComercioComponent,
     AllCommerceComponent,
     ComercioDetailComponent,
-    CategoriasComponent
+    CategoriasComponent,
+    SectorCommerceComponent
   ],
   imports: [
     BrowserModule,
