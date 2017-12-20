@@ -12,6 +12,8 @@ import { ComercioService } from './services/comercio.service';
 import { AllCommerceComponent } from './all-commerce/all-commerce.component';
 import { ComercioDetailComponent } from './comercio-detail/comercio-detail.component'
 import { HttpModule } from '@angular/http';
+import { CategoriasComponent } from './categorias/categorias.component';
+import { CategoriasService } from './services/categorias.service'
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { HttpModule } from '@angular/http';
     ComercioListComponent,
     ComercioComponent,
     AllCommerceComponent,
-    ComercioDetailComponent
+    ComercioDetailComponent,
+    CategoriasComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,7 @@ import { HttpModule } from '@angular/http';
     routes,
     HttpModule
   ],
-  providers: [ComercioService],
+  providers: [ComercioService, CategoriasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

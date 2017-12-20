@@ -29,5 +29,16 @@
         "descripcion": "Celicor licoreria",
         "logo": "../assets/comercios/celicor.jpg"
     }
+    ],
+    "categorias":[
+        {
+            "nombre": "Licoreria"
+        },
+        {
+            "nombre": "Mercado"
+        },
+        {
+            "nombre": "Farmacia"
+        }
     ]
 }
