@@ -4,6 +4,7 @@ import { ComercioService } from '../services/comercio.service';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
+
 @Component({
   selector: 'app-comercio-list',
   templateUrl: './comercio-list.component.html',
@@ -17,5 +18,5 @@ export class ComercioListComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
 }

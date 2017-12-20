@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ComercioService } from '../services/comercio.service';
 import { Comercio } from '../comercio-list/models/comercio';
 import { Observable } from 'rxjs/Observable';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-sector-commerce',
@@ -15,7 +16,7 @@ export class SectorCommerceComponent implements OnInit {
   private nombre: string;
   private sub:any;
 
-  constructor(private route: ActivatedRoute, private comercioService: ComercioService) { }
+  constructor(private route: ActivatedRoute, private comercioService: ComercioService, private _location: Location) { }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
@@ -30,6 +31,10 @@ export class SectorCommerceComponent implements OnInit {
 
   orden(tipodeorden: string){
     this.comercios = this.comercioService.getComerciobysector(this.nombre, tipodeorden);
+  }
+
+  ClickBack(){
+    this._location.back();
   }
 
 }

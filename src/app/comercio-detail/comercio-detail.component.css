@@ -10,3 +10,6 @@ img{
     display: flex;
     align-items: center
 }
+.btn{
+    align-items: top;
+}
