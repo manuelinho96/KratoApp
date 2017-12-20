@@ -25,9 +25,72 @@
     {
         "nombre": "Celicor",
         "sector": "Licoreria",
-        "rating": 5,
+        "rating": 4,
         "descripcion": "Celicor licoreria",
         "logo": "../assets/comercios/celicor.jpg"
+    },
+    {
+        "nombre": "Central Madeirense",
+        "sector": "Mercado",
+        "rating": 5,
+        "descripcion": "Mercado Central Madeirense",
+        "logo": "../assets/comercios/central.jpg"
+    },
+    {
+        "nombre": "Farmaahorro",
+        "sector": "Farmacia",
+        "rating": 2,
+        "descripcion": "Farmacias farmaahorro",
+        "logo": "../assets/comercios/farmaahorro.jpg"
+    },
+    {
+        "nombre": "Farmatodo",
+        "sector": "Farmacia",
+        "rating": 5,
+        "descripcion": "Farmatodo en donde venden todo",
+        "logo": "../assets/comercios/farmatodo.jpg"
+    },
+    {
+        "nombre": "FundaFarmacia",
+        "sector": "Farmacia",
+        "rating": 3,
+        "descripcion": "Fundafarmacia descripcion",
+        "logo": "../assets/comercios/fundafarmacia.jpg"
+    },
+    {
+        "nombre": "LicorStore",
+        "sector": "Licoreria",
+        "rating": 1,
+        "descripcion": "Licoreria que vende licores",
+        "logo": "../assets/comercios/licorstore.jpg"
+    },
+    {
+        "nombre": "Makro",
+        "sector": "Mercado",
+        "rating": 5,
+        "descripcion": "Makro es un mercado muy grande",
+        "logo": "../assets/comercios/makro.jpg"
+    },
+    {
+        "nombre": "Plazas",
+        "sector": "Mercado",
+        "rating": 2,
+        "descripcion": "Es una plaza este mercado",
+        "logo": "../assets/comercios/plazas.png"
+    },
+    {
+        "nombre": "Prolicor",
+        "sector": "Licoreria",
+        "rating": 2,
+        "descripcion": "Los mas pro en licores",
+        "logo": "../assets/comercios/prolicor.jpg"
+    },
+    {
+        "nombre": "Unicasa",
+        "sector": "Mercado",
+        "rating": 4,
+        "descripcion": "Porque somos unicasa",
+        "logo": "../assets/comercios/unicasa.jpg"
     }
     ],
     "categorias":[

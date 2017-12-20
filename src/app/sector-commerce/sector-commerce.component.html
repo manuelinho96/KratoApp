@@ -1,1 +1,10 @@
+<h1>Ordenar rating de forma: </h1>
+<div class="btn-group" data-toggle="buttons">
+    <label class="btn btn-secondary active" (click)="orden('asc')">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked>Ascendente
+    </label>
+    <label class="btn btn-secondary" (click)="orden('desc')">
+        <input type="radio" name="options" id="option2" autocomplete="off">Descendente
+    </label>
+</div>
 <app-comercio-list [comercios]="comercios"></app-comercio-list>

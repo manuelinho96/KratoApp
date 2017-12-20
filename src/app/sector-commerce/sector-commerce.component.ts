@@ -19,12 +19,17 @@ export class SectorCommerceComponent implements OnInit {
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      this.comercios = this.comercioService.getComerciobysector(params['nombre']);
+      this.nombre = params['nombre'];
+      this.comercios = this.comercioService.getComerciobysector(this.nombre, 'asc');
     });
   }
 
   ngOnDestroy(){
     this.sub.unsubscribe();
+  }
+
+  orden(tipodeorden: string){
+    this.comercios = this.comercioService.getComerciobysector(this.nombre, tipodeorden);
   }
 
 }

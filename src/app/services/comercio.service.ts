@@ -21,8 +21,9 @@ export class ComercioService {
     return this.getComercio().map(comercios => comercios.find(comercio => comercio.nombre == nombre));
   }
 
-  getComerciobysector(sector:string): Observable<Comercio[]>{
-    let apiURL = `${this.apiUrl}?sector=${sector}`;
+  getComerciobysector(sector:string, order:string): Observable<Comercio[]>{
+    console.log(order);
+    let apiURL = `${this.apiUrl}?_sort=rating&_order=${order},views&sector=${sector}`;
     return this.http.get(apiURL).map((res: Response) => { 
       return res.json().map(item => {
         return new Comercio( 
@@ -35,4 +36,5 @@ export class ComercioService {
       });
     });
   }
+
 }
