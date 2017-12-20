@@ -1,0 +1,33 @@
+{
+    "comercios":[
+        
+        {
+        "nombre": "Locatel",
+        "sector": "Farmacia",
+        "rating": 4,
+        "descripcion": "Farmacia Locatel",
+        "logo": "../assets/comercios/locatel.jpg"
+    },
+    {
+        "nombre": "Holic",
+        "sector": "Licoreria",
+        "rating": 5,
+        "descripcion": "Holic op",
+        "logo": "../assets/comercios/holic.png"
+    },
+    {
+        "nombre": "Excelcior Gama",
+        "sector": "Mercado",
+        "rating": 2,
+        "descripcion": "eg",
+        "logo": "../assets/comercios/eg.jpg"
+    },
+    {
+        "nombre": "Celicor",
+        "sector": "Licoreria",
+        "rating": 5,
+        "descripcion": "Celicor licoreria",
+        "logo": "../assets/comercios/celicor.jpg"
+    }
+    ]
+}

@@ -9,7 +9,9 @@ import { ComercioListComponent } from './comercio-list/comercio-list.component';
 import { ComercioComponent } from './comercio-list/comercio.component';
 import { routes } from './app.routes'
 import { ComercioService } from './services/comercio.service';
-import { AllCommerceComponent } from './all-commerce/all-commerce.component'
+import { AllCommerceComponent } from './all-commerce/all-commerce.component';
+import { ComercioDetailComponent } from './comercio-detail/comercio-detail.component'
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { AllCommerceComponent } from './all-commerce/all-commerce.component'
     NavbarComponent,
     ComercioListComponent,
     ComercioComponent,
-    AllCommerceComponent
+    AllCommerceComponent,
+    ComercioDetailComponent
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
-    routes
+    routes,
+    HttpModule
   ],
   providers: [ComercioService],
   bootstrap: [AppComponent]

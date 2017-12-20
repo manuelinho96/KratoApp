@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Comercio } from '../comercio-list/models/comercio';
 import { ComercioService } from '../services/comercio.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-all-commerce',
@@ -9,7 +10,7 @@ import { ComercioService } from '../services/comercio.service';
 })
 export class AllCommerceComponent implements OnInit {
 
-  comercios:Comercio[] = [];
+  comercios:Observable<Comercio[]>;
 
   constructor(private comercioService:ComercioService) { }
 

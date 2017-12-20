@@ -1,3 +1,3 @@
 <div class="row">
-  <app-comercio *ngFor="let comercio of comercios" [comercio]="comercio"></app-comercio>
+  <app-comercio *ngFor="let comercio of comercios | async" [comercio]="comercio"></app-comercio>
 </div>
