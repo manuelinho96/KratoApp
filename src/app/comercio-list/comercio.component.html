@@ -1,12 +1,14 @@
-<div class="card-deck">
-    <div class="card">
-        <a [routerLink]="['/comercio-details', comercio.nombre]">
-            <img class="card-img-top" src="{{comercio.logo}}" alt="Card image cap" width="300" height="200">
-        </a>
-        <div class="card-body">
-            <h4 class="card-title">{{comercio.nombre}}</h4>
-            <p class="card-text">Sector: {{comercio.sector}}</p>
-            <ngb-rating [rate]="comercio.rating"></ngb-rating>
+<div *ngIf="comercio != undefined">
+    <div class="card-deck">
+        <div class="card">
+            <a [routerLink]="['/comercio-details', comercio.nombre]">
+                <img class="card-img-top" src="{{comercio.logo}}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <h4 class="card-title">{{comercio.nombre}}</h4>
+                <p class="card-text">Sector: {{comercio.sector}}</p>
+                <ngb-rating [rate]="comercio.rating"></ngb-rating>
+            </div>
         </div>
     </div>
 </div>

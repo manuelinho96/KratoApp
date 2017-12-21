@@ -14,7 +14,9 @@ import { ComercioDetailComponent } from './comercio-detail/comercio-detail.compo
 import { HttpModule } from '@angular/http';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { CategoriasService } from './services/categorias.service';
-import { SectorCommerceComponent } from './sector-commerce/sector-commerce.component'
+import { SectorCommerceComponent } from './sector-commerce/sector-commerce.component';
+import { SearchComponent } from './search/search.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,13 +27,15 @@ import { SectorCommerceComponent } from './sector-commerce/sector-commerce.compo
     AllCommerceComponent,
     ComercioDetailComponent,
     CategoriasComponent,
-    SectorCommerceComponent
+    SectorCommerceComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
     routes,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [ComercioService, CategoriasService],
   bootstrap: [AppComponent]

@@ -8,6 +8,10 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ComercioService {
 
+
+  private nombre: any = [];
+  private descripcion: any = [];
+  private comercios:Observable<Comercio[]>;
   private apiUrl: string = 'http://localhost:3000/comercios';
 
   constructor(private http:Http) { }
@@ -22,7 +26,6 @@ export class ComercioService {
   }
 
   getComerciobysector(sector:string, order:string): Observable<Comercio[]>{
-    console.log(order);
     let apiURL = `${this.apiUrl}?_sort=rating&_order=${order},views&sector=${sector}`;
     return this.http.get(apiURL).map((res: Response) => { 
       return res.json().map(item => {
@@ -37,4 +40,41 @@ export class ComercioService {
     });
   }
 
+  getComerciobyname(descripcion:string): Observable<Comercio[]>{
+    this.descripcion = descripcion.toLowerCase();
+    let apiURL = `${this.apiUrl}?q=${descripcion}`;
+    return this.http.get(apiURL).map((res: Response) => { 
+      return res.json().map(item => {
+        console.log(item.description);
+        if(item.nombre.toLowerCase().indexOf(descripcion) != -1){
+          return new Comercio( 
+              item.nombre,
+              item.sector,
+              item.rating,
+              item.description,
+              item.logo
+          );
+        }
+      });
+    });
+  }
+
+  getComerciobydescription(descripcion:string): Observable<Comercio[]>{
+    this.descripcion = descripcion.toLowerCase();
+    let apiURL = `${this.apiUrl}?q=${descripcion}`;
+    return this.http.get(apiURL).map((res: Response) => { 
+      return res.json().map(item => {
+        console.log(item.description);
+        if(item.nombre.toLowerCase().indexOf(descripcion) == -1){
+          return new Comercio( 
+              item.nombre,
+              item.sector,
+              item.rating,
+              item.description,
+              item.logo
+          );
+        }
+      });
+    });
+  }
 }

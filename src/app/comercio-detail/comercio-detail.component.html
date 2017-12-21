@@ -1,13 +1,15 @@
-<div class="comercio">
-  <img [src]="comercio.logo" class="img-responsive">
-  <div>
-      <h1>Comercio: {{comercio.nombre}}</h1>
-      <p>Descripción: {{comercio.descripcion}}</p>
-      <p>Sector: {{comercio.sector}}</p>
-      <ngb-rating [rate]="comercio.rating"></ngb-rating>
+<div *ngIf="comercio != undefined">
+  <div class="comercio">
+    <img [src]="comercio.logo" class="img-responsive">
+    <div>
+        <h1>Comercio: {{comercio.nombre}}</h1>
+        <p>Descripción: {{comercio.description}}</p>
+        <p>Sector: {{comercio.sector}}</p>
+        <ngb-rating [rate]="comercio.rating"></ngb-rating>
+    </div>
   </div>
-</div>
-<div class="position-static">
-  <button type="button" class="btn btn-dark" (click)="ClickBack()">Volver</button>
+  <div class="position-static">
+    <button type="button" class="btn btn-dark" (click)="ClickBack()">Volver</button>
+  </div>
 </div>
 
