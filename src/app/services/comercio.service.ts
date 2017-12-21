@@ -40,13 +40,13 @@ export class ComercioService {
     });
   }
 
-  getComerciobyname(descripcion:string): Observable<Comercio[]>{
-    this.descripcion = descripcion.toLowerCase();
-    let apiURL = `${this.apiUrl}?q=${descripcion}`;
+  getComerciobynombresearch(nombre:string): Observable<Comercio[]>{
+    this.nombre = nombre.toLowerCase();
+    let apiURL = `${this.apiUrl}?q=${nombre}`;
     return this.http.get(apiURL).map((res: Response) => { 
       return res.json().map(item => {
         console.log(item.description);
-        if(item.nombre.toLowerCase().indexOf(descripcion) != -1){
+        if(item.nombre.toLowerCase().indexOf(nombre) != -1){
           return new Comercio( 
               item.nombre,
               item.sector,
@@ -59,7 +59,7 @@ export class ComercioService {
     });
   }
 
-  getComerciobydescription(descripcion:string): Observable<Comercio[]>{
+  getComerciobydescriptionsearch(descripcion:string): Observable<Comercio[]>{
     this.descripcion = descripcion.toLowerCase();
     let apiURL = `${this.apiUrl}?q=${descripcion}`;
     return this.http.get(apiURL).map((res: Response) => { 

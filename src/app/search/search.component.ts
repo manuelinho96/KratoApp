@@ -22,8 +22,8 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       this.nombre = params['param'];
-      this.comerciosnombre = this.comercioService.getComerciobyname(this.nombre.toLocaleLowerCase());
-      this.comerciosdescription = this.comercioService.getComerciobydescription(this.nombre.toLocaleLowerCase());
+      this.comerciosnombre = this.comercioService.getComerciobynombresearch(this.nombre.toLocaleLowerCase());
+      this.comerciosdescription = this.comercioService.getComerciobydescriptionsearch(this.nombre.toLocaleLowerCase());
     });
   }
 
