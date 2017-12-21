@@ -19,3 +19,9 @@ Para esta versión de la aplicación se pidió utilizar grunt. A pesar de invest
 no encontré la forma de incluirlo en la aplicación. Por ello decidí no utilizarlo.
 Espero esto no penalice gravemente la realización de mi trabajo y no ponga en duda mi capacidad de adaptarme a
 nuevas tecnologías.
+
+# Sobre los casos de prueba
+
+En los casos utilizados decidí mezclar la información de título de algunos comercios con la descripción de otros.
+Por ejemplo, al realizar la búsqueda: "locatel" se visualizan comercios como holic o excelcior gamma pues en su
+descripción incluí esta palabra. Con ello ejemplifico mi sistema de búsqueda.
